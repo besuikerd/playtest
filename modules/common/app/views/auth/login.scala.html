@@ -1,0 +1,6 @@
+@(form:Form[forms.LoginForm])(implicit messages:Messages)
+@helper.form(action = controllers.common.routes.AuthController.authenticate()){
+    @helper.inputText(form("username"))
+    @helper.inputPassword(form("password"))
+    <input type="submit" value="Login"/>
+}

@@ -1,0 +1,10 @@
+GET /                       controllers.common.Application.index()
+GET /index                  controllers.common.Application.index()
+
+#Auth
+GET /login                  controllers.common.AuthController.login
+POST /login/                controllers.common.AuthController.authenticate
+
+GET /logout                 controllers.common.AuthController.logout
+
+GET /assets/*file           controllers.common.Assets.at(path="/public/lib/common", file)
